@@ -52,24 +52,23 @@ const data = [
 const Screen1 = () => {
 	return (
 		<SafeAreaView>
-			<ScrollView>
-				<View>
-					<FlatList
-						data={data}
-						keyExtractor={(item, index) => 'key' + index}
 
-						renderItem={({ item }) =>
-							<Post
-								profile_photo={item.profile_photo}
-								user_name={item.user_name}
-								title={item.title}
-								description={item.description}
-								likes_count={item.likes_count}
-								comments_count={item.comments_count}
-								comments={item.comments} />}
-					/>
-				</View>
-			</ScrollView>
+			<View>
+				<FlatList
+					data={data}
+					keyExtractor={(item, index) => 'key' + index}
+
+					renderItem={({ item }) =>
+						<Post
+							profile_photo={item.profile_photo}
+							user_name={item.user_name}
+							title={item.title}
+							description={item.description}
+							likes_count={item.likes_count}
+							comments_count={item.comments_count}
+							comments={item.comments} />}
+				/>
+			</View>
 		</SafeAreaView>
 
 	)
