@@ -1,12 +1,11 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
 
-const Body = () => {
+const Body = ({ title, description }) => {
 	return (
 		<View style={styles.container}>
-			<Text style={styles.heading}>Heading</Text>
-			<Text style={styles.description} >FaceBook Post by Aishwarya: saadsdasd adasdsc</Text>
-			{/* <Image style={styles.image} source={{ uri: "https://picsum.photos/200/200" }} /> */}
+			<Text style={styles.heading}>{title}</Text>
+			<Text style={styles.description} >{description}</Text>
 		</View>
 	)
 }

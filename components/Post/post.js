@@ -4,12 +4,12 @@ import Body from './Body'
 import Header from './Header'
 import Footer from './Footer'
 
-const Post = () => {
+const Post = ({ profile_photo, user_name, title, description, likes_count, comments_count, comments }) => {
 	return (
-		<View style={styles.container}>
-			<Header />
-			<Body />
-			<Footer />
+		<View style={styles.container} >
+			<Header user_name={user_name} profile_photo={profile_photo} />
+			<Body title={title} description={description} />
+			<Footer likes_count={likes_count} comments_count={comments_count} comments={comments} />
 		</View>
 	)
 }

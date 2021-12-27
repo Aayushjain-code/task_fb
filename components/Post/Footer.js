@@ -1,15 +1,15 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from 'react-native'
 
-const Footer = () => {
+const Footer = ({ likes_count, comments_count, comments }) => {
 	return (
 		<>
 			<View style={styles.footerRow}>
 				<View style={{ backgroundColor: 'white', padding: 2, borderRadius: 4, width: "48%", borderWidth: 1 }}>
-					<Text> ❤️ 😍 😀 🤣 🙌 123</Text>
+					<Text> ❤️ 😍 😀 🤣 🙌 {likes_count}</Text>
 				</View>
 				<View style={{ backgroundColor: 'white', padding: 2, borderRadius: 4, width: "38%", borderWidth: 1 }}>
-					<Text>Comments:1235 </Text>
+					<Text>Comments:{comments_count} </Text>
 				</View>
 			</View>
 			<View style={styles.container} >

@@ -2,16 +2,21 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import Profilepicture from '../others/Profilepicture'
 
-const Header = () => {
+const Header = ({ user_name, profile_photo }) => {
 	return (
-		<View style={styles.container}>
-			{/* Profile */}
-			<Profilepicture />
-			{/* Name */}
-			<Text style={styles.myText}>
-				Name
-			</Text>
-			{/* date */}
+		<View style={styles.hedder}>
+			<View style={styles.container}>
+				{/* Profile */}
+				<Profilepicture profile_photo={profile_photo} />
+				{/* Name */}
+				<Text style={styles.myText}>
+					{user_name}
+				</Text>
+				{/* date */}
+			</View>
+			<View style={styles.dots}>
+				<Text>⚫⚫⚫</Text>
+			</View>
 		</View>
 	)
 }
@@ -19,10 +24,20 @@ const Header = () => {
 export default Header
 
 const styles = StyleSheet.create({
-	container: {
+	dots: {
+		marginTop: 25,
+		marginRight: 10,
+		color: 'black',
+	},
+	hedder: {
 		flexDirection: 'row',
+		justifyContent: 'space-between',
 		borderWidth: 1,
 		borderRadius: 10,
+	},
+	container: {
+		flexDirection: 'row',
+
 	},
 	myText: {
 		fontWeight: 'bold',

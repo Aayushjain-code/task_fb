@@ -1,10 +1,10 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
 
-const Profilepicture = () => {
+const Profilepicture = ({ profile_photo }) => {
 	return (
 		<View style={styles.container}>
-			<Image style={styles.image} source={{ uri: "https://i.pravatar.cc/200" }} />
+			<Image style={styles.image} source={{ uri: profile_photo }} />
 		</View>
 	)
 }
